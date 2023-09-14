@@ -1,0 +1,13 @@
+@mixin wordStyle($fontSize, $fontWeight, $fontColor) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+}
+
+@mixin flexStyle($direction, $gap, $aling, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  align-items: $aling;
+  justify-content: $justify;
+}

@@ -1,0 +1,21 @@
+@import "../abstracts/mixins.scss";
+@import "../abstracts/variables.scss";
+
+.vpnSection {
+  text-align: center;
+  &_title {
+    @include wordStyle(2.2rem, 500, $colorBlack);
+    max-width: 24rem;
+    margin: auto;
+    margin-bottom: 1.3rem;
+  }
+  &_subTitle {
+    @include wordStyle(1rem, 400, $colorGrey);
+    line-height: 1.9rem;
+    max-width: 35rem;
+    margin: 0 auto 10rem auto;
+    span {
+      font-weight: 500;
+    }
+  }
+}

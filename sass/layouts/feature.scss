@@ -1,0 +1,27 @@
+@import "../abstracts/mixins.scss";
+@import "../abstracts/variables.scss";
+
+.features {
+  margin: 0 0 7.92rem 0;
+  @include flexStyle(row, 20rem, flex-end, center);
+
+  &-wrapper {
+    max-width: 26.7rem;
+    @include flexStyle(column, 1.25rem, normal, normal);
+    &_title {
+      @include wordStyle(2.18rem, 500, $colorBlack);
+      line-height: 3.125rem;
+    }
+    &_content {
+      @include wordStyle(1rem, normal, $colorGrey);
+      line-height: 1.875rem;
+    }
+  }
+  &_list {
+    @include flexStyle(row, 0.7rem, center, normal);
+    @include wordStyle(0.9rem, normal, $colorGrey);
+    &Container {
+      @include flexStyle(column, 1rem, normal, normal);
+    }
+  }
+}

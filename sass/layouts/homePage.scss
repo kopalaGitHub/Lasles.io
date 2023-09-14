@@ -1,0 +1,118 @@
+@import "../abstracts/mixins.scss";
+@import "../abstracts/variables.scss";
+.header {
+  @include flexStyle(row, 0, center, space-between);
+
+  margin-bottom: 5.53rem;
+  &_logoSide {
+    @include flexStyle(row, 0, center, normal);
+  }
+  &_listContainer {
+    @include flexStyle(row, 2.5rem, normal, normal);
+  }
+  &_list {
+    @include wordStyle(1rem, 400, $colorGrey);
+  }
+  &_buttonContainer {
+    @include flexStyle(row, 1.88rem, center, normal);
+    color: $colorBlack;
+    margin-right: 4.19rem;
+  }
+}
+
+//
+.logoName {
+  @include wordStyle(1.25rem, 400, $colorBlack);
+  margin-left: 0.62rem;
+  user-select: none;
+  span {
+    font-weight: 500;
+  }
+}
+.signInLink {
+  @include wordStyle(1rem, 500, $colorBlack);
+  &:hover {
+    color: $colorOrange;
+    transition: 0.4s;
+  }
+}
+.button--whiteWithOrangeBorder {
+  @include wordStyle(1rem, 500, $colorOrange);
+  background: none;
+  border-radius: 3.125rem;
+  border: 1px solid $colorOrange;
+  padding: 0.81rem 2.81rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $colorOrange;
+    color: white;
+    transition: 0.4s;
+  }
+}
+
+.button--orangeRectangle {
+  @include wordStyle(1rem, 700, #fff);
+  border: none;
+  line-height: 1.5625rem;
+  background: $colorOrange;
+  border-radius: 0.625rem;
+  padding: 1.09rem 4.84rem;
+  box-shadow: 0 20px 20px -2px rgba(245, 56, 56, 0.35);
+  cursor: pointer;
+}
+//
+
+.main {
+  @include flexStyle(row, 0, center, space-between);
+  margin-bottom: 6.53rem;
+  &_contentWrapper {
+    max-width: 34.7rem;
+    &-title {
+      @include wordStyle(3.125rem, 500, $colorBlack);
+      line-height: 4.375rem;
+      margin-bottom: 1.25rem;
+    }
+    &-content {
+      @include wordStyle(1rem, normal, $colorGrey);
+      line-height: 1.875rem;
+      margin-bottom: 3.12rem;
+    }
+  }
+}
+.miniInfo {
+  @include flexStyle(row, 0, normal, space-between);
+  border-radius: 0.625rem;
+  box-shadow: 0 40px 57px 10px rgba(13, 16, 37, 0.05);
+  padding: 2.33rem 0;
+  width: 95%;
+  margin: auto;
+  &_container {
+    width: 100%;
+    @include flexStyle(row, 2.28rem, center, center);
+    padding: 1.9rem 0;
+    border-right: 3px solid #eeeff2;
+    &--short {
+      flex: 4;
+    }
+    &--long {
+      flex: 5;
+    }
+    &:last-child {
+      border: none;
+    }
+    &-icon {
+      border-radius: 50%;
+      background: #ffecec;
+      padding: 0.97rem;
+    }
+    &-content {
+      h6 {
+        @include wordStyle(1.5rem, 700, $colorBlack);
+        margin-bottom: 0.31rem;
+      }
+      p {
+        @include wordStyle(1.25rem, normal, $colorGrey);
+      }
+    }
+  }
+}

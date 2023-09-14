@@ -1,0 +1,82 @@
+@import "../abstracts/mixins.scss";
+@import "../abstracts/variables.scss";
+.subSection {
+  background-color: #f8f8f8;
+  padding-bottom: 10rem;
+
+  &_titleBox {
+    text-align: center;
+    padding: 5rem 0 3.75rem;
+    max-width: 34rem;
+    margin: auto;
+  }
+  &_title {
+    @include wordStyle(2.1875rem, 500, $colorBlack);
+    margin-bottom: 2rem;
+  }
+  &_subTitle {
+    @include wordStyle(1rem, 400, $colorGrey);
+    line-height: 1.875rem;
+  }
+}
+
+.subCard {
+  border-radius: 0.625rem;
+  border: 2px solid #ddd;
+  background: #fff;
+  width: 20.625rem;
+  height: 47.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 0 3.12rem;
+
+  &_title {
+    @include wordStyle(1.12rem, 500, $colorBlack);
+    margin: 1.88rem 0;
+  }
+  &_infoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &-line {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-left: 4.37rem;
+      p {
+        @include wordStyle(0.87rem, 400, $colorGrey);
+      }
+    }
+  }
+  &_price {
+    @include wordStyle(1.5rem, 500, $colorBlack);
+    margin-bottom: 1.25rem;
+    span {
+      color: $colorGrey;
+      font-weight: 400;
+    }
+  }
+  &-button {
+    padding: 0.8rem 4rem;
+    font-weight: 700;
+    &_active {
+      box-shadow: 0 20px 20px -2px rgba(245, 56, 56, 0.35);
+      background: $colorOrange;
+      color: white;
+    }
+  }
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3.12rem;
+    margin-bottom: 10rem;
+  }
+}
+.sponsor_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
